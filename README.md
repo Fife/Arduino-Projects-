@@ -10,6 +10,8 @@ Written by Jacob Fifield in April 2020
 A problem with many Arduino MIDI drumset tutorials is that they usually call a delay() function to make the midi note a reasonable length. The problem with that is when you try
 to hit 2 drums at once, the later of the 2 inputs gets eaten completely due to the system pause in delay(). My goal was to create a MIDI drumset that would allow the user to hit multiple notes at once. Another goal was to make a velocity function that felt a bit more reactive. 
 
+[Better MIDI Drums](Arduino-Projects/Better_Midi_Drums/Better-Midi-Drums.cpp)
+
 
 ## Multi Dimensional Tremolo
 
