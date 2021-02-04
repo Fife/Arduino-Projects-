@@ -122,22 +122,18 @@ void checkDiff(int diff2)
 {
   if (diff2< 10) //Less Than 10, it passes
   {
-    ClearLED();
     Animation(4);
   }
   if (diff2 < 20 && diff2 > 10) //Less than 20 but greater than 10, re-test
   {
-    ClearLED();
     Animation(2);
   }
   if (diff2 < 50 && diff2 > 20) //Less than 50 but greater than 20, check connection Cable Fails
   {
-    ClearLED();
     Animation(1);
   }
   if (diff2 > 50) // Cable has significant amplitude loss, Cable Fails
   {
-    ClearLED();
     Animation(0);
   }
 }
