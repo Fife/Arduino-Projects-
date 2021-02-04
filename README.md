@@ -67,6 +67,8 @@ D08 - Output Channel 1 (Output to phototransistor corrispoonding to channel one 
 
 D07 - Toggle Switch (Custom Mode/Poly Mode)
 
+[Multi Dimensional Tremolo](Arduino-Projects-/Multi_Dimensional_Tremolo/Multi-Dimensional-Tremolo.cpp)
+
 ## Cable Tester
 
 Written By Jacob Fifield Febuary 2021
