@@ -13,6 +13,7 @@ to hit 2 drums at once, the later of the 2 inputs gets eaten completely due to t
 
 ## Multi Dimensional Tremolo
 
+```
 Multi-Dimensional Tremolo Guitar Pedal
 by Jacob Fifield September 2020
 
@@ -47,6 +48,8 @@ D11 - Push Button 1 (Sync+Unsync/ Record Custom Pattern/Play Tremolo)
 D09 - Output Channel 2 (Output to phototransistor corrispoonding to channel two of the opamp)
 D08 - Output Channel 1 (Output to phototransistor corrispoonding to channel one of the opamp)
 D07 - Toggle Switch (Custom Mode/Poly Mode)
+
+```
 
 ## Cable Tester
 
