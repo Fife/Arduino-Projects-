@@ -25,11 +25,10 @@ const int sampleRate = 44100;
 
 /****** Min/Max Variables ******/
 int max1 = 0;
-int max0 =0; 
+int max0 = 0; 
 int min0 = 500;
 int min1 = 500;
 int diff = 0;
-unsigned long lastButtonPress = 0;
 
 
 /* Setup pin i/o mode and play a startup LED animation */
@@ -172,7 +171,6 @@ void loop() {
     {
       ClearLED(); //Clear LED function to turn all LEDs OFF
       max1=0;max0=0; min0 = 0;min1 = 0;diff = 0;  //Reset the maximum, minimum and amplitude difference as we are starting a new test
-      lastButtonPress = millis(); //Remember the last time the button was pressed 
       readingFlag = true; //Set the reading flag to true. This means that we are currently sampling the tone from pin 9.
     }
     
@@ -182,7 +180,7 @@ void loop() {
       int i = 0;
       while (i<2000) // We will pull 2000 samples at our sample rate
       {
-        currentMillis = millis();
+        currentMillis = millis(); //Used for timekeeping
         if (currentMillis - prevMillis  >= 1/sampleRate) // If we are within a frame of our sample rate
         {
           prevMillis = currentMillis; // Take note of the current time
@@ -191,7 +189,7 @@ void loop() {
           if (current_input0 > max0) max0 = current_input0; //max calculation for internal 
           if (current_input0 < min0) min0 = current_input0; //min calculation for internal
           if (current_input1 > max1) max1 = current_input1; //max calculation for external
-          if (current_input1 < min1 && current_input1>10) min1 = current_input1; //mincalculation for external, minimum can't be zero.
+          if (current_input1 < min1 && current_input1>10) min1 = current_input1; //min calculation for external, minimum can't be zero.
           i++;
         }
       }
