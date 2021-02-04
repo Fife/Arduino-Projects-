@@ -1,12 +1,10 @@
-
-
-
 /****** LED Pin Setup *******/
 
 const int greenLED = 10;
 const int yellowLED = 11;
 const int redLED = 12;
 const int buttonPin = 7;
+const int outputPin = 9;
 
 /****** Input Setup ******/
 const int in0 = 0;
@@ -21,6 +19,7 @@ int current_input0 = 0;
 int prev_input1 = 0;
 int current_input1 = 0;
 bool readingFlag = false;
+float freq = 440.0;
 
 /****** Min/Max Variables ******/
 int max1=0;
@@ -31,12 +30,11 @@ int diff = 0;
 unsigned long lastButtonPress = 0;
 
 void setup() {
-
 pinMode(greenLED, OUTPUT);
 pinMode(yellowLED, OUTPUT);
 pinMode(redLED, OUTPUT);
-pinMode(9, OUTPUT);
-pinMode(7, INPUT_PULLUP);
+pinMode(outputPin, OUTPUT);
+pinMode(buttonPin, INPUT_PULLUP);
 //Serial.begin(9600);
 Animation (6);
 Animation (7);
@@ -145,7 +143,7 @@ void checkBadGround(int internalSignalAmp)
 
 
 void loop() { 
-    tone(9, 440); //Generate 440hz tone on pin 9
+    tone(outputPin, freq); //Generate 440hz tone on pin 9
     bool buttonstate = digitalRead(buttonPin); //Read the button connected to the button pin
     
     if (buttonstate == false) //Input mode is PULLUP so when the button gets pressed it sends a LOW or FALSE
