@@ -98,7 +98,6 @@ float PB_rate = 0;
 unsigned long prev_H_Millis = 0;
 const int Erase_time = 3000;
 
-
 //EEPROM
 const int starting_EEPROM_address = 17;
 
@@ -156,7 +155,6 @@ void Erase_Animation()                                                          
   digitalWrite(out1, LOW);
   digitalWrite(out2, LOW);
 }
-
 
 void Playback()
 {
@@ -281,7 +279,6 @@ void customMode()
     }
   }
 } // end of void customMode();
-
 
 void B1_toggle() {
   pushb1_state = digitalRead(pushb1);                               //This function takes the input from Momentary PB_1 and turns it into toggle information
@@ -425,8 +422,6 @@ void setup()
   pinMode(indicator_b, OUTPUT);
   pinMode(indicator_g, OUTPUT);
 }
-
-
 
 void loop()
 {
