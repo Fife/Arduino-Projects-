@@ -1,5 +1,5 @@
 /*
- * Jacob Fifield
+ * Written by Jacob Fifield on April 4th 2020
  * MIDI Drum Extra Curricular Submission
  * Here is the code for my MIDI drum pad that I designed over Spring Break
  *
