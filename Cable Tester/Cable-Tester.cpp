@@ -126,15 +126,15 @@ void checkDiff(int diff2)
   {
     Animation(4);
   }
-  if (diff2 < 20 && diff2 > 10) //Less than 20 but greater than 10, re-test
+  else if (diff2 < 20 && diff2 > 10) //Less than 20 but greater than 10, re-test
   {
     Animation(2);
   }
-  if (diff2 < 50 && diff2 > 20) //Less than 50 but greater than 20, check connection Cable Fails
+  else if (diff2 < 50 && diff2 > 20) //Less than 50 but greater than 20, check connection Cable Fails
   {
     Animation(1);
   }
-  if (diff2 > 50) // Cable has significant amplitude loss, Cable Fails
+  else if (diff2 > 50) // Cable has significant amplitude loss, Cable Fails
   {
     Animation(0);
   }
