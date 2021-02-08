@@ -39,6 +39,7 @@
      D09 - Output Channel 2 (Output to phototransistor corrispoonding to channel two of the opamp)
      D08 - Output Channel 1 (Output to phototransistor corrispoonding to channel one of the opamp)
      D07 - Toggle Switch (Custom Mode/Poly Mode)
+     D06 - Utility Push Button
 
 */
 
@@ -98,6 +99,7 @@ float PB_rate = 0;
 unsigned long prev_H_Millis = 0;
 const int Erase_time = 3000;
 
+
 //EEPROM
 const int starting_EEPROM_address = 17;
 
@@ -109,7 +111,7 @@ void Utility_Handler()
   {
     //Do Utility function for Poly Mode (MIDI Clock Sync)
   }
-  if (pushb3_state == 1 && playback_state == 1)                                     //Do Utility function for Custom Mode (Erase Function)
+  else if (pushb3_state == 1 && playback_state == 1)                                     //Do Utility function for Custom Mode (Erase Function)
   {
     prev_H_Millis = millis();
     while (pushb3_state == 1)                                                       //While the Utility Button is being pressed in a playback state
@@ -155,6 +157,7 @@ void Erase_Animation()                                                          
   digitalWrite(out1, LOW);
   digitalWrite(out2, LOW);
 }
+
 
 void Playback()
 {
@@ -279,6 +282,7 @@ void customMode()
     }
   }
 } // end of void customMode();
+
 
 void B1_toggle() {
   pushb1_state = digitalRead(pushb1);                               //This function takes the input from Momentary PB_1 and turns it into toggle information
@@ -422,6 +426,8 @@ void setup()
   pinMode(indicator_b, OUTPUT);
   pinMode(indicator_g, OUTPUT);
 }
+
+
 
 void loop()
 {
