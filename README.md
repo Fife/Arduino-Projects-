@@ -51,25 +51,10 @@ These ON/OFF states are used to drive a photo transistor to cut an audio signal 
 and "tuplet aware" tremolo circuit as the circuit has a different volume level that is dependant on the overall logic state of the two transistors.
 Putting these two outputs into a passive mixer circuit should let the user emphasize either the poly rhythmic element or the lower division.
 
-Pin layout cheatsheet:
 
-A0 - 2K Ohm Potentiometer (Rate knob)
+[Multi Dimensional Tremolo For 328P](Arduino-Projects-/Multi_Dimensional_Tremolo/Multi-Dimensional-Tremolo-328p.cpp)
 
-A1 - 10K Ohm Potentiometer (Poly knob, Will be replaced with notched pot)
-
-D12 - Push Button 2 (Tap Tempo/ Custom Pattern Input)
-
-D11 - Push Button 1 (Sync+Unsync/ Record Custom Pattern/Play Tremolo)
-
-D09 - Output Channel 2 (Output to phototransistor corrispoonding to channel two of the opamp)
-
-D08 - Output Channel 1 (Output to phototransistor corrispoonding to channel one of the opamp)
-
-D07 - Toggle Switch (Custom Mode/Poly Mode)
-
-D06 - Toggle Switch (Utility)
-
-[Multi Dimensional Tremolo](Arduino-Projects-/Multi_Dimensional_Tremolo/Multi-Dimensional-Tremolo.cpp)
+[Multi Dimensional Tremolo For 324U](Arduino-Projects-/Multi_Dimensional_Tremolo/Multi-Dimensional-Tremolo-32U4.cpp)
 
 ## Cable Tester
 
