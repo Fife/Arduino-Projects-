@@ -21,8 +21,8 @@
    Pin layout cheatsheet for 324U:
      A0 - 2K Ohm Potentiometer (Rate knob)
      A1 - 10K Ohm Potentiometer (Poly knob, Will be replaced with notched pot)
-     D12 - Push Button 2 (Tap Tempo/ Custom Pattern Input)
-     D11 - Push Button 1 (Sync+Unsync/ Record Custom Pattern/Play Tremolo)
+     D15 - Push Button 2 (Tap Tempo/ Custom Pattern Input)
+     D14 - Push Button 1 (Sync+Unsync/ Record Custom Pattern/Play Tremolo)
      D09 - Output Channel 2 (Output to phototransistor corrispoonding to channel two of the opamp)
      D08 - Output Channel 1 (Output to phototransistor corrispoonding to channel one of the opamp)
      D07 - Toggle Switch (Custom Mode/Poly Mode)
